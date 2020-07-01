@@ -62,9 +62,13 @@ const styles = StyleSheet.create({
   },
   RoomcardsContainer: {
     flexDirection: "row",
-    alignContent: "space-between",
+    alignContent: "space-around",
     justifyContent: "center",
     flexWrap: "wrap",
     borderWidth: 1,
+    padding:20,
+    borderRadius: 10,
+    width: "80%",
+    marginLeft: 40,
   },
 });

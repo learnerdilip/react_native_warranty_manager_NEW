@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Button, TextInput } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  TextInput,
+  SafeAreaView,
+  FlatList,
+} from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Constants from "../Constants";
 import Card from "../components/Card";
@@ -31,6 +39,12 @@ export default function HomePage() {
         </View>
         {/* <StatusBar style="auto" /> */}
       </View>
+      <SafeAreaView>
+        <FlatList
+          data={items}
+          renderItem={({ item }) => <Card id={item} title={item} />}
+        />
+      </SafeAreaView>
       <View style={styles.RoomcardsContainer}>
         {items.length > 0 &&
           items.map((item, index) => (
@@ -66,7 +80,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     flexWrap: "wrap",
     borderWidth: 1,
-    padding:20,
+    padding: 20,
     borderRadius: 10,
     width: "80%",
     marginLeft: 40,

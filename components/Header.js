@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     height: 50,
   },
   headerText: {
-    color: "white",
+    color: Constants.primaryTextColor,
     fontSize: 20,
   },
 });

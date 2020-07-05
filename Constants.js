@@ -1,5 +1,6 @@
 const Constants = {
-  primaryColor: "#2255aa",
+  primaryColor: "lavender",
+  primaryTextColor: "#000000",
 };
 
 export default Constants;

@@ -27,7 +27,7 @@ export default function HomePage() {
         </View>
         <View style={styles.inputButton}>
           <Button
-            color={Constants.primaryColor}
+            color={Constants.primaryTextColor}
             title="ADD"
             onPress={() =>
               setItems((prev) => {
@@ -45,14 +45,14 @@ export default function HomePage() {
           renderItem={({ item }) => <Card id={item} title={item} />}
         />
       </SafeAreaView>
-      <View style={styles.RoomcardsContainer}>
+      {/* <View style={styles.RoomcardsContainer}>
         {items.length > 0 &&
           items.map((item, index) => (
             <View key={index} text={item}>
               <Card text={item} />
             </View>
           ))}
-      </View>
+      </View> */}
     </View>
   );
 }

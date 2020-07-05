@@ -1,26 +1,25 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Constants from "../Constants";
 
 export default function Card(props) {
   return (
-    <View style={styles.cardContainer}>
-      <Text style={styles.cardText}>{props.text}</Text>
-    </View>
+    <TouchableOpacity style={styles.cardContainer}>
+      <Text style={styles.cardText}>{props.title}</Text>
+    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   cardContainer: {
-    backgroundColor: Constants.primaryColor,
-    marginHorizontal: 5,
+    backgroundColor: "lavender",
     marginVertical: 5,
     padding: 10,
-    width: 100,
+    width: "100%",
     alignItems: "center",
   },
   cardText: {
-    color: "white",
+    color: Constants.primaryTextColor,
     fontSize: 15,
   },
 });
